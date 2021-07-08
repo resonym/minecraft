@@ -4,12 +4,14 @@ body {
 	background-color: #000032;
 	color: white;
 	display: flex;
-	font-family: 'Press Start 2P', sans-serif;
+	font-family: sans-serif;
+	font-size: larger;
 	justify-content: center;
 	line-height: 150%;
 }
 
 h1, h2, h3, h4, h5, h6 {
+	font-family: 'Press Start 2P', sans-serif;
 	margin-bottom: 0;
 }
 
