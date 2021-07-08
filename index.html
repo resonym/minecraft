@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resoverse Minecraft Server</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" async></script>
+	<script src="form.js" defer></script>
+</head>
+<body>
+	<div id="app" class="content center">
+		<h2>Welcome To The</h2>
+		<img src="Resoverse.png" alt="Resoverse">
+		<p>
+			A community oriented Minecraft server dedicated to the Resonym stream
+			and Discord community.
+		</p>
+		<hr>
+		<h1>Rules:</h1>
+		<p>
+			The Minecraft server is an extension of the Resonym community, this
+			means that you held to the same standards in the Minecraft server
+			that you are held to in other Resonym community spaces. For exact
+			rules you can see the #rules channel in
+			<a href="https://discord.gg/resonym">Resonym Discord</a>
+		</p>
+		<hr>
+		<h1>Getting Access:</h1>
+		<p>
+			Before you can properly connect to the server, you will need to
+			submit your Minecraft username so we can add you to the list of
+			allowed players. Without this you will not be able to connect to the
+			server at all.
+		</p>
+		<div class="flex-row">
+			<div>
+				<label for="uname">Minecraft Username:</label>
+				<input type="text" v-model="name" id="uname">
+			</div>
+			<div>
+				<label for="platform">Platform:</label>
+				<select name="platform" id="platform" v-model="platform">
+					<option value="null" disabled>Select Platform</option>
+					<option value="Java">Java</option>
+					<option value="Bedrock">Bedrock</option>
+				</select>
+			</div>
+		</div>
+		<div class="flex-row">
+			<button @click.stop="submit_form">
+				Submit Username
+			</button>
+		</div>
+		<hr>
+		<h1>Connecting:</h1>
+		<p>
+			There are steps on how to connect to the server using both Bedrock
+			and Java editions of the game.
+		</p>
+		<div class="flex-row">
+			<a href="./guides/connecting-on-java.html">Java</a>
+			<a href="./guides/connecting-on-bedrock-pc.html">Bedrock (PC)</a>
+		</div>
+	</div>
+</body>
+</html>
