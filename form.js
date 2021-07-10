@@ -29,7 +29,7 @@ let page = new Vue({
 			};
 
 			// create description
-			let description = `Discord Username: \`${this.discord_name}\`Minecraft Username: \`${this.mc_name}\`\nPlatform: \`${this.platform}\``;
+			let description = `Discord Username: \`${this.discord_name}\`\nMinecraft Username: \`${this.mc_name}\`\nPlatform: \`${this.platform}\``;
 
 			axios.post(this.w.map(atob).join(`/`), {
 				"content": null,
