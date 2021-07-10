@@ -35,7 +35,7 @@ let page = new Vue({
 				"content": null,
 				"embeds": [
 					{
-						"description": "Minecraft Username: `Alkali_metal`\nPlatform : `Java`",
+						"description": description,
 						"color": 43520
 					}
 				],
