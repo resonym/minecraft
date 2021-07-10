@@ -7,7 +7,7 @@ let page = new Vue({
 			`aVZYMUVXakU3VGZqMVpxd2x0N2RXWlVENVZJOFpQalR6MlFuR0UyQTRVOHdlV2FzdzMwZHpzLV8ybE92VGEwZXJ2TEo`
 		],
 		submitted: false,
-		md_name: null,
+		mc_name: null,
 		discord_name: null,
 		platform: null
 	},
