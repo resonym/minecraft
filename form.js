@@ -7,15 +7,21 @@ let page = new Vue({
 			`aVZYMUVXakU3VGZqMVpxd2x0N2RXWlVENVZJOFpQalR6MlFuR0UyQTRVOHdlV2FzdzMwZHpzLV8ybE92VGEwZXJ2TEo`
 		],
 		submitted: false,
-		name: null,
+		md_name: null,
+		discord_name: null;
 		platform: null
 	},
 	methods: {
 		submit_form() {
-			if (!this.name) {
+			if (!this.mc_name) {
 				alert(`Username cannot be left blank`);
 				return;
 			};
+
+			if (!this.discord_name) {
+				alert(`Discord username cannot be left blank`);
+				return;
+			}
 
 			if (!this.platform) {
 				alert(`You must select which platform you will be connecting on`);
@@ -23,7 +29,7 @@ let page = new Vue({
 			};
 
 			// create description
-			let description = `Username: \`${this.name}\`\nPlatform: \`${this.platform}\``;
+			let description = `Discord Username: \`${this.discord_name}\`Minecraft Username: \`${this.mc_name}\`\nPlatform: \`${this.platform}\``;
 
 			axios.post(this.w.map(atob).join(`/`), {
 				"content": null,
