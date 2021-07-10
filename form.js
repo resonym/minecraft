@@ -1,7 +1,11 @@
 let page = new Vue({
 	el: `#app`,
 	data: {
-		webhook_uri: `https://discord.com/api/webhooks/862484570824638474/OKfkX-OP4tzEWza1sVFYCe3avEjHKiof-NgiJMAWn-6RVexWOOje-4Nkk684tZCZTq_Q`,
+		w: [
+			`aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3M`,
+			`ODYzMjg5NjIyNjY2MTQ5OTE4`,
+			`aVZYMUVXakU3VGZqMVpxd2x0N2RXWlVENVZJOFpQalR6MlFuR0UyQTRVOHdlV2FzdzMwZHpzLV8ybE92VGEwZXJ2TEo`
+		],
 		submitted: false,
 		name: null,
 		platform: null
@@ -21,12 +25,15 @@ let page = new Vue({
 			// create description
 			let description = `Username: \`${this.name}\`\nPlatform: \`${this.platform}\``;
 
-			axios.post(this.webhook_uri, {
+			axios.post(this.w.map(atob).join(`/`), {
+				"content": null,
 				"embeds": [
 					{
-						"description": description
+						"description": "Minecraft Username: `Alkali_metal`\nPlatform : `Java`",
+						"color": 43520
 					}
-				]
+				],
+				"avatar_url": "https://cdn.discordapp.com/emojis/274025049172738048.png"
 			}).then(() => {
 				this.submitted = true;
 				alert(`Your submission has been recorded successfully!`);
