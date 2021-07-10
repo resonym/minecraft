@@ -8,7 +8,7 @@ let page = new Vue({
 		],
 		submitted: false,
 		md_name: null,
-		discord_name: null;
+		discord_name: null,
 		platform: null
 	},
 	methods: {
