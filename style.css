@@ -8,12 +8,17 @@ body {
 	font-size: larger;
 	justify-content: center;
 	line-height: 150%;
+	width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Press Start 2P', sans-serif;
 	margin-bottom: 0;
+	line-height: initial;
 }
+
+.shrinkable { display: flex; }
+.shrinkable > .shrink { flex-shrink: 1; }
 
 code {
 	background-color: black;
@@ -29,6 +34,7 @@ code {
 
 .flex-row {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-evenly;
 }
 
@@ -48,4 +54,8 @@ input, select, button {
 	margin-bottom: 10px;
 	outline: none;
 	padding: 7px;
+}
+
+img {
+	width: min(645px, 100%);
 }
