@@ -57,5 +57,9 @@ input, select, button {
 }
 
 img {
+	height: 150px;
+}
+
+img.title {
 	width: min(645px, 100%);
 }
